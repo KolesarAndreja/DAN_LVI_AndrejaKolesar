@@ -7,6 +7,11 @@ namespace DAN_LVI
 {
     class Program
     {
+        /// <summary>
+        /// Read html for given url
+        /// </summary>
+        /// <param name="Url">Url path</param>
+        /// <returns>html as string</returns>
         public static string ReadHtml(string Url)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
@@ -18,7 +23,9 @@ namespace DAN_LVI
             response.Close();
             return result;
         }
-
+        /// <summary>
+        /// Application for downloading html files and zipping this files
+        /// </summary>
         static void Main(string[] args)
         {
             string path;
@@ -32,6 +39,7 @@ namespace DAN_LVI
                 {
                     break;
                 }
+                //zip
                 else if(input == "zip")
                 {
                     try
@@ -46,6 +54,7 @@ namespace DAN_LVI
                     }
                     
                 }
+                //download html
                 else
                 {
                     try
