@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <meta property="fb:app_id" content="235682883225736" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@nuget">
+
+    <meta property="og:title" content="System.IO.Compression 4.3.0" />
+    <meta property="og:type" content="nugetgallery:package" />
+    <meta property="og:url" content="https://www.nuget.org/packages/System.IO.Compression/" />
+    <meta property="og:description" content="Provides classes that support the compression and decompression of streams.
+
+Commonly Used Types:
+System.IO.Compression.DeflateStream
+System.IO.Compression.GZipStream
+System.IO.Compression.CompressionMode
+System.IO.Compression.CompressionLevel
+System.IO.Compression.ZipArchiveEntry
+System.IO.Compression.ZipArchive
+System.IO.Compression.ZipArchiveMode
+ 
+When using NuGet 3.x this package requires at least version 3.4." />
+    <meta property="og:determiner" content="a" />
+    <meta property="og:image" content="https://api.nuget.org/v3-flatcontainer/system.io.compression/4.3.0/icon" />
+
+        <link rel="alternate" type="application/atom+xml" title="Subscribe to System.IO.Compression updates" href="/packages/System.IO.Compression/atom.xml" />
+
+    
+
+    <title>
+        NuGet Gallery
+        | System.IO.Compression 4.3.0
+    </title>
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link title="NuGet.org" type="application/opensearchdescription+xml" href="/opensearch.xml" rel="search">
+
+    <link href="/Content/gallery/css/site.min.css?v=G6hEm0k79dY8cgpt14aVr7uek8-9pTlMzOZjLAYgMNg1" rel="stylesheet"/>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+                    <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', 'UA-62780441-33', 'auto');
+                    ga('set', 'anonymizeIp', true);
+                    ga('set', 'page', '');
+                    ga('set', 'title', '');
+                    ga('send', 'pageview');
+                </script>
+
+    
+    
+                <script type="text/javascript">
+                var appInsights = window.appInsights || function (config) {
+                    function s(config) {
+                        t[config] = function () {
+                            var i = arguments;
+                            t.queue.push(function () { t[config].apply(t, i) })
+                        }
+                    }
+
+                    var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u;
+                    for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop());
+                    return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) {
+                        var s = u && u(config, r, f, e, o);
+                        return s !== !0 && t["_" + i](config, r, f, e, o), s
+                    }), t
+                }({
+                    instrumentationKey: 'df3a36b9-dfba-401c-82ab-35690083be3e',
+                    samplingPercentage: 100
+                });
+
+                window.appInsights = appInsights;
+                appInsights.trackPageView();
+            </script>
+
+</head>
+<body>
+    
+
+
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="#" id="skipToContent" class="showOnFocus" title="Skip To Content">Skip To Content</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
+                        <img class="navbar-logo" width="94" height="29" alt="NuGet home"
+                             src="/Content/gallery/img/logo-header.svg"
+                                 onerror="this.src='https://www.nuget.org/Content/gallery/img/logo-header-94x29.png'; this.onerror = null;"
+ />
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" role="tablist">
+                            <li class="active" role="presentation">
+        <a role="tab" aria-selected="true" href="/packages">
+            <span>Packages</span>
+        </a>
+    </li>
+
+                            <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/packages/manage/upload">
+            <span>Upload</span>
+        </a>
+    </li>
+
+    <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/stats">
+            <span>Statistics</span>
+        </a>
+    </li>
+                                                    <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="https://docs.microsoft.com/en-us/nuget/">
+            <span>Documentation</span>
+        </a>
+    </li>
+
+                            <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/downloads">
+            <span>Downloads</span>
+        </a>
+    </li>
+
+                            <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="https://blog.nuget.org/">
+            <span>Blog</span>
+        </a>
+    </li>
+
+                    </ul>
+                        <ul class="nav navbar-nav navbar-right" role="tablist">
+    <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/users/account/LogOn?returnUrl=%2Fpackages%2FSystem.IO.Compression%2F" title="Sign in to an existing NuGet.org account">
+            <span>Sign in</span>
+        </a>
+    </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container search-container">
+            <div class="row">
+                <form aria-label="Package search bar" class="col-sm-12" action="/packages" method="get">
+                    <div class="input-group">
+    <input name="q" type="text" class="form-control" id="search" aria-label="Enter packages to search"
+           placeholder="Search for packages..." autocomplete="off"
+           value=""
+            />
+    <span class="input-group-btn">
+        <button class="btn btn-default btn-warning btn-search" type="submit"
+                title="Search for packages" aria-label="Search">
+            <span class="ms-Icon ms-Icon--Search" aria-hidden="true"></span>
+        </button>
+    </span>
+</div>
+                    <div id="autocomplete-results-container" class="text-left" tabindex="0"></div>
+
+<script type="text/html" id="autocomplete-results-row">
+    <!-- ko if: $data -->
+    <!-- ko if: $data.PackageRegistration -->
+    <div class="col-sm-4 autocomplete-row-id autocomplete-row-data">
+        <span data-bind="attr: { id: 'autocomplete-result-id-' + $data.PackageRegistration.Id, title: $data.PackageRegistration.Id }, text: $data.PackageRegistration.Id"></span>
+    </div>
+    <div class="col-sm-4 autocomplete-row-downloadcount text-right autocomplete-row-data">
+        <span data-bind="text: $data.DownloadCount + ' downloads'"></span>
+    </div>
+    <div class="col-sm-4 autocomplete-row-owners text-left autocomplete-row-data">
+        <span data-bind="text: $data.OwnersString + ' '"></span>
+    </div>
+    <!-- /ko -->
+    <!-- ko ifnot: $data.PackageRegistration -->
+    <div class="col-sm-12 autocomplete-row-id autocomplete-row-data">
+        <span data-bind="attr: { id: 'autocomplete-result-id-' + $data, title: $data  }, text: $data"></span>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="autocomplete-results-template">
+    <!-- ko if: $data.data.length > 0 -->
+    <div data-bind="foreach: $data.data" id="autocomplete-results-list">
+        <a data-bind="attr: { id: 'autocomplete-result-row-' + $data, href: '/packages/' + $data, title: $data }" tabindex="-1">
+            <div data-bind="attr:{ id: 'autocomplete-container-' + $data }" class="autocomplete-results-row">
+            </div>
+        </a>
+    </div>
+    <!-- /ko -->
+</script>
+
+                </form>
+            </div>
+        </div>
+</nav>
+
+
+
+
+
+
+    <div id="skippedToContent">
+    
+
+
+
+
+
+
+
+
+
+
+<section role="main" class="container main-container page-package-details">
+    <div class="row">
+        <aside aria-label="Package icon" class="col-sm-1">
+            <h3>
+                <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                     src="https://api.nuget.org/v3-flatcontainer/system.io.compression/4.3.0/icon"
+                         onerror="this.src='https://www.nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+            </h3>
+        </aside>
+        <article class="col-sm-8 package-details-main">
+            <div class="package-title">
+                <h1>
+                    System.<wbr>IO.<wbr>Compression
+                    <small class="text-nowrap">4.3.0</small>
+
+                        <img class="reserved-indicator"
+                             src="/Content/gallery/img/reserved-indicator.svg"
+                                 onerror="this.src='https://www.nuget.org/Content/gallery/img/reserved-indicator-25x25.png'; this.onerror = null;"
+
+                             title="The ID prefix of this package has been reserved for one of the owners of this package by NuGet.org." />
+                </h1>
+
+            </div>
+
+                <p>Provides classes that support the compression and decompression of streams.<br /><br />Commonly Used Types:<br />System.IO.Compression.DeflateStream<br />System.IO.Compression.GZipStream<br />System.IO.Compression.CompressionMode<br />System.IO.Compression.CompressionLevel<br />System.IO.Compression.ZipArchiveEntry<br />System.IO.Compression.ZipArchive<br />System.IO.Compression.ZipArchiveMode<br /> <br />When using NuGet 3.x this package requires at least version 3.4.</p>
+
+
+
+
+
+
+                        
+
+
+
+
+                <p>Requires NuGet 2.12 or higher.</p>
+
+                <div class="install-tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+
+    <li role="presentation" class="active">
+        <a href="#package-manager" aria-expanded="true"
+           id="package-manager-tab" class="package-manager-tab"
+           aria-selected="true"
+           aria-controls="package-manager" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for Package Manager">
+            Package Manager
+        </a>
+    </li>
+    <li role="presentation" class="">
+        <a href="#dotnet-cli" aria-expanded="false"
+           id="dotnet-cli-tab" class="package-manager-tab"
+           aria-selected="false"
+           aria-controls="dotnet-cli" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for .NET CLI">
+            .NET CLI
+        </a>
+    </li>
+    <li role="presentation" class="">
+        <a href="#package-reference" aria-expanded="false"
+           id="package-reference-tab" class="package-manager-tab"
+           aria-selected="false"
+           aria-controls="package-reference" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for PackageReference">
+            PackageReference
+        </a>
+    </li>
+    <li role="presentation" class="">
+        <a href="#paket-cli" aria-expanded="false"
+           id="paket-cli-tab" class="package-manager-tab"
+           aria-selected="false"
+           aria-controls="paket-cli" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for Paket CLI">
+            Paket CLI
+        </a>
+    </li>
+                    </ul>
+                    <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane active" id="package-manager">
+        <div>
+            <div class="install-script-row">
+                <pre class="install-script" id="package-manager-text">Install-Package System.IO.Compression -Version 4.3.0</pre>
+                <div class="copy-button">
+                    <button id="package-manager-button" class="btn btn-default btn-warning" type="button"
+                            data-toggle="popover" data-placement="bottom" data-content="Copied."
+                            aria-label="Copy the Package Manager command">
+                        <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane " id="dotnet-cli">
+        <div>
+            <div class="install-script-row">
+                <pre class="install-script" id="dotnet-cli-text">dotnet add package System.IO.Compression --version 4.3.0</pre>
+                <div class="copy-button">
+                    <button id="dotnet-cli-button" class="btn btn-default btn-warning" type="button"
+                            data-toggle="popover" data-placement="bottom" data-content="Copied."
+                            aria-label="Copy the .NET CLI command">
+                        <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane " id="package-reference">
+        <div>
+            <div class="install-script-row">
+                <pre class="install-script" id="package-reference-text">&lt;PackageReference Include=&quot;System.IO.Compression&quot; Version=&quot;4.3.0&quot; /&gt;</pre>
+                <div class="copy-button">
+                    <button id="package-reference-button" class="btn btn-default btn-warning" type="button"
+                            data-toggle="popover" data-placement="bottom" data-content="Copied."
+                            aria-label="Copy the PackageReference XML node">
+                        <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    <div class="icon-text alert alert-info" >
+        <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i>
+        
+For projects that support <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files">PackageReference</a>, copy this XML node into the project file to reference the package.
+                    
+    </div>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="paket-cli">
+        <div>
+            <div class="install-script-row">
+                <pre class="install-script" id="paket-cli-text">paket add System.IO.Compression --version 4.3.0</pre>
+                <div class="copy-button">
+                    <button id="paket-cli-button" class="btn btn-default btn-warning" type="button"
+                            data-toggle="popover" data-placement="bottom" data-content="Copied."
+                            aria-label="Copy the Paket CLI command">
+                        <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    <div class="icon-text alert alert-warning" >
+        <i class="ms-Icon ms-Icon--Warning" aria-hidden="true"></i>
+        
+The NuGet Team does not provide support for this client. Please contact its <a href="https://fsprojects.github.io/Paket/contact.html">maintainers</a> for support.
+                    
+    </div>
+    </div>
+                    </div>
+                </div>
+
+                    <h2>Release Notes</h2>
+                    <p><a href="https://go.microsoft.com/fwlink/?LinkID=799421" rel="nofollow">https://go.microsoft.com/fwlink/?LinkID=799421</a></p>
+                    <h2>
+                        <a href="#" role="button" data-toggle="collapse" data-target="#dependency-groups"
+                           aria-expanded="false" aria-controls="dependency-groups"
+                           id="show-dependency-groups">
+                            <i class="ms-Icon ms-Icon--ChevronRight"
+                               aria-hidden="true"></i>
+                            <span>Dependencies</span>
+                        </a>
+                    </h2>
+                        <ul class="list-unstyled panel-collapse collapse dependency-groups" id="dependency-groups">
+                                <li>
+                                        <h4><span>.NETCore 5.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    <a href="/packages/runtime.native.System.IO.Compression/">runtime.native.System.IO.Compression</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Buffers/">System.Buffers</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Collections/">System.Collections</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Diagnostics.Debug/">System.Diagnostics.Debug</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.IO/">System.IO</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Resources.ResourceManager/">System.Resources.ResourceManager</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime/">System.Runtime</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime.Extensions/">System.Runtime.Extensions</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime.Handles/">System.Runtime.Handles</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime.InteropServices/">System.Runtime.InteropServices</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Text.Encoding/">System.Text.Encoding</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Threading/">System.Threading</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Threading.Tasks/">System.Threading.Tasks</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>.NETFramework 4.5</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>.NETFramework 4.6</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>.NETStandard 1.1</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    <a href="/packages/System.IO/">System.IO</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime/">System.Runtime</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Text.Encoding/">System.Text.Encoding</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>.NETStandard 1.3</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    <a href="/packages/Microsoft.NETCore.Platforms/">Microsoft.NETCore.Platforms</a>
+                                                    <span>(&gt;= 1.1.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/runtime.native.System/">runtime.native.System</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/runtime.native.System.IO.Compression/">runtime.native.System.IO.Compression</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Buffers/">System.Buffers</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Collections/">System.Collections</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Diagnostics.Debug/">System.Diagnostics.Debug</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.IO/">System.IO</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Resources.ResourceManager/">System.Resources.ResourceManager</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime/">System.Runtime</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime.Extensions/">System.Runtime.Extensions</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime.Handles/">System.Runtime.Handles</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Runtime.InteropServices/">System.Runtime.InteropServices</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Text.Encoding/">System.Text.Encoding</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Threading/">System.Threading</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/System.Threading.Tasks/">System.Threading.Tasks</a>
+                                                    <span>(&gt;= 4.3.0)</span>
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>MonoAndroid 1.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>MonoTouch 1.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>Portable Class Library (.NETFramework 4.5, Windows 8.0, WindowsPhoneApp 8.1)</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>Windows 8.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>WindowsPhoneApp 8.1</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>Xamarin.iOS 1.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>Xamarin.Mac 2.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>Xamarin.TVOS 1.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                        <h4><span>Xamarin.WatchOS 1.0</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    No dependencies.
+                                            </li>
+                                    </ul>
+                                </li>
+                        </ul>
+
+                <h2>
+                    <a href="#" role="button" data-toggle="collapse" data-target="#used-by"
+                       aria-expanded="false" aria-controls="used-by" id="show-used-by">
+                        <i class="ms-Icon ms-Icon--ChevronRight" aria-hidden="true"></i>
+                        <span>Used By</span>
+                    </a>
+                </h2>
+                <div class="used-by panel-collapse collapse" id="used-by">
+                            <h3>
+                                <strong>NuGet packages </strong> (264)
+                            </h3>
+                            <p>
+                                Showing the top 5 NuGet packages that depend on System.IO.Compression:
+                            </p>
+                            <table class="table borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="used-by-adjust-table-head">Package</th>
+                                        <th class="used-by-adjust-table-head">Downloads</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="no-border">
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a class="text-left ngp-link" href="/packages/System.Net.Http/">
+                                                    System.Net.Http
+                                                </a>
+                                                    <img class="reserved-indicator"
+                                                         src="/Content/gallery/img/reserved-indicator.svg"
+                                                             onerror="this.src='https://www.nuget.org/Content/gallery/img/reserved-indicator-14x14.png'; this.onerror = null;"
+
+                                                         title="The ID prefix of this package has been reserved for one of the owners of this package by NuGet.org." />
+                                                <div class="row used-by-desc">
+                                                    <span>Provides a programming interface for modern HTTP applications, including HTTP client components that allow applications to consume web services over HTTP and HTTP components that can be used by both clients and servers for parsing HTTP headers.
+
+Commonly Used Types:
+System.Net.Http.HttpResponseMessage
+System.Net.Http.DelegatingHandler
+System.Net.Http.HttpRequestException
+System.Net.Http.HttpClient
+System.Net.Http.MultipartContent
+System.Net.Http.Headers.HttpContentHeaders
+System.Net.Http.HttpClientHandler
+System.Net.Http.StreamContent
+System.Net.Http.FormUrlEncodedContent
+System.Net.Http.HttpMessageHandler
+ 
+When using NuGet 3.x this package requires at least version 3.4.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--Download used-by-download-icon" aria-hidden="true"></i> <label class="used-by-count">253.7M</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a class="text-left ngp-link" href="/packages/NETStandard.Library/">
+                                                    NETStandard.Library
+                                                </a>
+                                                    <img class="reserved-indicator"
+                                                         src="/Content/gallery/img/reserved-indicator.svg"
+                                                             onerror="this.src='https://www.nuget.org/Content/gallery/img/reserved-indicator-14x14.png'; this.onerror = null;"
+
+                                                         title="The ID prefix of this package has been reserved for one of the owners of this package by NuGet.org." />
+                                                <div class="row used-by-desc">
+                                                    <span>A set of standard .NET APIs that are prescribed to be used and supported together. 
+18a36291e48808fa7ef2d00a764ceb1ec95645a5 
+When using NuGet 3.x this package requires at least version 3.4.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--Download used-by-download-icon" aria-hidden="true"></i> <label class="used-by-count">227.2M</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a class="text-left ngp-link" href="/packages/System.IO.Compression.ZipFile/">
+                                                    System.IO.Compression.ZipFile
+                                                </a>
+                                                    <img class="reserved-indicator"
+                                                         src="/Content/gallery/img/reserved-indicator.svg"
+                                                             onerror="this.src='https://www.nuget.org/Content/gallery/img/reserved-indicator-14x14.png'; this.onerror = null;"
+
+                                                         title="The ID prefix of this package has been reserved for one of the owners of this package by NuGet.org." />
+                                                <div class="row used-by-desc">
+                                                    <span>Provides classes that support the compression and decompression of streams using file system paths.
+
+Commonly Used Types:
+System.IO.Compression.ZipFile
+ 
+When using NuGet 3.x this package requires at least version 3.4.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--Download used-by-download-icon" aria-hidden="true"></i> <label class="used-by-count">124.4M</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a class="text-left ngp-link" href="/packages/StackExchange.Redis/">
+                                                    StackExchange.Redis
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>High performance Redis client, incorporating both synchronous and asynchronous usage.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--Download used-by-download-icon" aria-hidden="true"></i> <label class="used-by-count">43.0M</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a class="text-left ngp-link" href="/packages/StackExchange.Redis.StrongName/">
+                                                    StackExchange.Redis.StrongName
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>High performance Redis client, incorporating both synchronous and asynchronous usage.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--Download used-by-download-icon" aria-hidden="true"></i> <label class="used-by-count">21.1M</label>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+
+                            <h3>
+                                <strong>GitHub repositories </strong> (239)
+                            </h3>
+                            <p>
+                                Showing the top 5 popular GitHub repositories that depend on System.IO.Compression:
+                            </p>
+                            <table class="table borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="used-by-adjust-table-head">Repository</th>
+                                        <th class="used-by-adjust-table-head">Stars</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="no-border">
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a data-index-number="0" class="text-left gh-link" href="https://github.com/dotnet-architecture/eShopOnContainers" target="_blank">
+                                                    dotnet-architecture/eShopOnContainers
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>Cross-platform .NET sample microservices and container based application that runs on Linux Windows and macOS. Powered by .NET Core 3.0, Docker Containers and Azure Kubernetes Services. Supports Visual Studio, VS for Mac and CLI based environments with Docker CLI, dotnet CLI, VS Code or any other code editor.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--FavoriteStarFill gh-star" aria-hidden="true"></i> <label class="used-by-count">15.0K</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a data-index-number="1" class="text-left gh-link" href="https://github.com/dotnet/orleans" target="_blank">
+                                                    dotnet/orleans
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>Orleans is a cross-platform framework for building distributed applications with .NET</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--FavoriteStarFill gh-star" aria-hidden="true"></i> <label class="used-by-count">6.8K</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a data-index-number="2" class="text-left gh-link" href="https://github.com/JeffreySu/WeiXinMPSDK" target="_blank">
+                                                    JeffreySu/WeiXinMPSDK
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>微信公众平台SDK Senparc.Weixin for C#，支持.NET Framework及.NET Core。已支持微信公众号、小程序、小游戏、企业号、企业微信、开放平台、微信支付、JSSDK、微信周边等全平台。 WeChat SDK for C#.</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--FavoriteStarFill gh-star" aria-hidden="true"></i> <label class="used-by-count">6.4K</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a data-index-number="3" class="text-left gh-link" href="https://github.com/microsoft/ailab" target="_blank">
+                                                    microsoft/ailab
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>Experience, Learn and Code the latest breakthrough innovations with Microsoft AI</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--FavoriteStarFill gh-star" aria-hidden="true"></i> <label class="used-by-count">6.0K</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="used-by-desc-column">
+                                                <a data-index-number="4" class="text-left gh-link" href="https://github.com/xamarin/Xamarin.Forms" target="_blank">
+                                                    xamarin/Xamarin.Forms
+                                                </a>
+                                                <div class="row used-by-desc">
+                                                    <span>Xamarin.Forms Official Home</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="ms-Icon ms-Icon--FavoriteStarFill gh-star" aria-hidden="true"></i> <label class="used-by-count">4.7K</label>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                </div>
+
+            <h2>
+                <a href="#" role="button" data-toggle="collapse" data-target="#version-history"
+                   aria-expanded="true" aria-controls="version-history" id="show-version-history">
+                    <i class="ms-Icon ms-Icon--ChevronDown" aria-hidden="true"></i>
+                    <span>Version History</span>
+                </a>
+            </h2>
+            <div class="version-history panel-collapse collapse in" aria-expanded="true" id="version-history">
+                <table aria-label="Version History of System.IO.Compression" class="table borderless">
+                    <thead>
+                        <tr>
+                            <th>Version</th>
+                            <th>Downloads</th>
+                            <th>Last updated</th>
+                            <th aria-label="Signature Information" abbr="Signature Information"></th>
+                            <th aria-label="Deprecation Information" abbr="Deprecation Information"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+
+                                <tr class="bg-info">
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.3.0" title="4.3.0">
+                                            4.3.0
+                                        </a>
+                                    </td>
+                                    <td>
+                                        77,567,199
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-11-15T23:44:52.5700000">11/15/2016</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.3.0-preview1-24530-04" title="4.3.0-preview1-24530-04">
+                                            4.3.0-preview1-24530-04
+                                        </a>
+                                    </td>
+                                    <td>
+                                        323,086
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-10-24T16:40:12.5100000">10/24/2016</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.1.0" title="4.1.0">
+                                            4.1.0
+                                        </a>
+                                    </td>
+                                    <td>
+                                        49,826,767
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-06-27T12:17:38.1830000">6/27/2016</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.1.0-rc2-24027" title="4.1.0-rc2-24027">
+                                            4.1.0-rc2-24027
+                                        </a>
+                                    </td>
+                                    <td>
+                                        5,408,737
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-05-16T14:05:56.3300000">5/16/2016</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.1.0-beta-23516" title="4.1.0-beta-23516">
+                                            4.1.0-beta-23516
+                                        </a>
+                                    </td>
+                                    <td>
+                                        41,593
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-11-18T13:10:49.7000000">11/18/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+        </tbody><tbody class="no-border collapse " id="hidden-versions">
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.1-beta-23409" title="4.0.1-beta-23409">
+                                            4.0.1-beta-23409
+                                        </a>
+                                    </td>
+                                    <td>
+                                        14,224
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-10-15T16:50:29.9470000">10/15/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.1-beta-23225" title="4.0.1-beta-23225">
+                                            4.0.1-beta-23225
+                                        </a>
+                                    </td>
+                                    <td>
+                                        76,444
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-09-01T23:56:59.9470000">9/1/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0" title="4.0.0">
+                                            4.0.0
+                                        </a>
+                                    </td>
+                                    <td>
+                                        1,776,307
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-07-29T09:10:48.7200000">7/29/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0-beta-23109" title="4.0.0-beta-23109">
+                                            4.0.0-beta-23109
+                                        </a>
+                                    </td>
+                                    <td>
+                                        74,784
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-07-27T17:03:05.1500000">7/27/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0-beta-23019" title="4.0.0-beta-23019">
+                                            4.0.0-beta-23019
+                                        </a>
+                                    </td>
+                                    <td>
+                                        24,939
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-06-30T17:33:55.0700000">6/30/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0-beta-22816" title="4.0.0-beta-22816">
+                                            4.0.0-beta-22816
+                                        </a>
+                                    </td>
+                                    <td>
+                                        74,287
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-04-24T18:11:25.2400000">4/24/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0-beta-22605" title="4.0.0-beta-22605">
+                                            4.0.0-beta-22605
+                                        </a>
+                                    </td>
+                                    <td>
+                                        7,741
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-02-13T19:24:06.8070000">2/13/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0-beta-22416" title="4.0.0-beta-22416">
+                                            4.0.0-beta-22416
+                                        </a>
+                                    </td>
+                                    <td>
+                                        4,624
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-01-16T15:09:50.6330000">1/16/2015</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/packages/System.IO.Compression/4.0.0-beta-22231" title="4.0.0-beta-22231">
+                                            4.0.0-beta-22231
+                                        </a>
+                                    </td>
+                                    <td>
+                                        22,080
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2014-11-11T23:18:57.6270000">11/11/2014</span>
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+
+                                    <td class="package-icon-cell">
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                    <a href="#" role="button" data-toggle="collapse" class="icon-link" data-target="#hidden-versions"
+                       aria-expanded="false" aria-controls="hidden-versions" id="show-hidden-versions">
+                        <i class="ms-Icon ms-Icon--CalculatorAddition" aria-hidden="true"></i>
+                        <span>Show more</span>
+                    </a>
+            </div>
+        </article>
+        <aside aria-label="Package details info" class="col-sm-3 package-details-info">
+            <h2>Info</h2>
+            <ul class="list-unstyled ms-Icon-ul">
+                <li>
+                    <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                    last updated <span data-datetime="2016-11-15T23:44:52.5700000">11/15/2016</span>
+                </li>
+                    <li>
+                        <i class="ms-Icon ms-Icon--Globe" aria-hidden="true"></i>
+                        <a href="https://dot.net/" data-track="outbound-project-url" title="Visit the project site to learn more about this package" rel="nofollow">
+https://dot.net/                        </a>
+                    </li>
+                                                    <li>
+                        <i class="ms-Icon ms-Icon--Certificate" aria-hidden="true"></i>
+                            <a href="https://go.microsoft.com/fwlink/?LinkId=329770"
+                               data-track="outbound-license-url" title="Make sure you agree with the license" rel="nofollow">
+MS-.NET-Library License                            </a>
+                    </li>
+                <li>
+                    <i class="ms-Icon ms-Icon--Mail" aria-hidden="true"></i>
+                    <a href="/packages/System.IO.Compression/4.3.0/ContactOwners" title="Ask the package owners a question">Contact owners</a>
+                </li>
+                    <li>
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        <a href="/packages/System.IO.Compression/4.3.0/ReportAbuse" title="Report the package as abusive">
+                            Report
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="ms-Icon ms-Icon--CloudDownload" aria-hidden="true"></i>
+                        <a href="https://www.nuget.org/api/v2/package/System.IO.Compression/4.3.0" data-track="outbound-manual-download" title="Download the raw nupkg file." rel="nofollow">Download package</a>
+                        &nbsp;(473.83 KB)
+                    </li>
+                    <li class="no-clickonce">
+                        <i class="ms-Icon ms-Icon--OpenInNewWindow" aria-hidden="true"></i>
+                        <a href="https://npe.codeplex.com/releases/clickonce/NuGetPackageExplorer.application?url=https://www.nuget.org/api/v2/package/System.IO.Compression/&amp;id=System.IO.Compression&amp;version=4.3.0" title="Explore the nupkg with the NuGet Package Explorer (IE only)" rel="nofollow">Open in Package Explorer</a>
+                    </li>
+
+                
+
+
+            </ul>
+                <p>License info provided by <a href="http://sonatype.com/">Sonatype</a>.</p>
+
+            <h2>Statistics</h2>
+            <ul class="list-unstyled ms-Icon-ul">
+                <li>
+                    <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                    136,157,294 total downloads
+                </li>
+                <li>
+                    <i class="ms-Icon ms-Icon--Giftbox" aria-hidden="true"></i>
+                    77,567,199 downloads
+                    of current version
+                </li>
+                <li>
+                    <i class="ms-Icon ms-Icon--Financial" aria-hidden="true"></i>
+                    64,407 downloads
+                    per day (avg)
+                </li>
+            </ul>
+                <a href="/stats/packages/System.IO.Compression?groupby=Version" title="Package Statistics">View full stats</a>
+
+            <h2>Owners</h2>
+            <ul class="list-unstyled owner-list">
+                        <li>
+                                <a href="/profiles/Microsoft" title="Microsoft">
+                                    <img src="/profiles/Microsoft/avatar?imageSize=64"
+                                class="owner-image"
+                                height="32"
+                                width="32"
+                                title="Microsoft"
+                                alt="Microsoft gravatar" />
+                                </a>
+                            <a href="/profiles/Microsoft" title="Microsoft">
+                                Microsoft
+                            </a>
+                        </li>
+                        <li>
+                                <a href="/profiles/dotnetframework" title="dotnetframework">
+                                    <img src="/profiles/dotnetframework/avatar?imageSize=64"
+                                class="owner-image"
+                                height="32"
+                                width="32"
+                                title="dotnetframework"
+                                alt="dotnetframework gravatar" />
+                                </a>
+                            <a href="/profiles/dotnetframework" title="dotnetframework">
+                                dotnetframework
+                            </a>
+                        </li>
+            </ul>
+
+                    <h2>Authors</h2>
+                    <p>Microsoft</p>
+                    <h2>Copyright</h2>
+                    <p>&#169; Microsoft Corporation.  All rights reserved.</p>
+
+                <h2>Share</h2>
+                <p class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.nuget.org/packages/System.IO.Compression/&t=Check+out+System.IO.Compression+on+%23NuGet." target="_blank">
+                        <img width="24" height="24" alt="Share this package on Facebook"
+                             src="https://www.nuget.org/Content/gallery/img/facebook.svg"
+                                 onerror="this.src='https://www.nuget.org/Content/gallery/img/facebook-24x24.png'; this.onerror = null;"
+ />
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.nuget.org/packages/System.IO.Compression/&text=Check+out+System.IO.Compression+on+%23NuGet." target="_blank">
+                        <img width="24" height="24" alt="Tweet this package"
+                             src="https://www.nuget.org/Content/gallery/img/twitter.svg"
+                                 onerror="this.src='https://www.nuget.org/Content/gallery/img/twitter-24x24.png'; this.onerror = null;"
+ />
+                    </a>
+                        <a href="/packages/System.IO.Compression/atom.xml" data-track="atom-feed">
+                            <img width="24" height="24" alt="Use the Atom feed to subscribe to new versions of System.IO.Compression"
+                                 src="https://www.nuget.org/Content/gallery/img/rss.svg"
+                                     onerror="this.src='https://www.nuget.org/Content/gallery/img/rss-24x24.png'; this.onerror = null;"
+ />
+                        </a>
+                </p>
+        </aside>
+    </div>
+</section>
+
+
+
+
+    </div>
+    <div class="usabilla-button" id="usabilla-button" style="display: none">
+    <a tabindex="0" id="usbl-integrated-button" href="#" role="button">
+        <img width="40" height="130" src="/Content/gallery/img/feedback.svg" alt="Usabilla Feedback"
+                    onerror="this.src='https://www.nuget.org/Content/gallery/img/feedback-40x130.png'; this.onerror = null;"
+ />
+    </a>
+</div>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="footer-heading"><a href="/policies/Contact">Contact</a></span>
+                <p>
+                    Got questions about NuGet or the NuGet Gallery?
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="footer-heading"><a href="https://status.nuget.org/">Status</a></span>
+                <p>
+                    Find out the service status of NuGet.org and its related services.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="footer-heading">
+                    <a aria-label="Frequently Asked Questions" href="https://docs.microsoft.com/en-us/nuget/policies/nuget-faq">
+                        <abbr title="Frequently Asked Questions">FAQ</abbr>
+                    </a>
+                </span>
+                <p>
+                    Read the Frequently Asked Questions about NuGet and see if your question made the list.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 row-gap">
+                <img alt="" aria-hidden="true" width="184" height="57"
+                     src="/Content/gallery/img/logo-footer.svg"
+                         onerror="this.src='https://www.nuget.org/Content/gallery/img/logo-footer-184x57.png'; this.onerror = null;"
+ />
+            </div>
+            <div class="col-md-9 row-gap">
+                <div class="row">
+                        <div class="col-md-12 footer-release-info">
+                            <p>
+                                        &#169; Microsoft 2020 -
+                                <a href="/policies/About">About</a> -
+                                <a href="/policies/Terms">Terms of Use</a> -
+                                <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy Policy</a>
+                                    - <a href="https://www.microsoft.com/trademarks">Trademarks</a>
+                                <br />
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--
+    This is the NuGet Gallery version 4.4.5-master.
+        Deployed from 1da55ac Link: https://www.github.com/NuGet/NuGetGallery/commit/1da55ac
+        Built on master Link: https://www.github.com/NuGet/NuGetGallery/tree/master
+        Built on 2020-08-18T23:52:49.0000000+00:00
+    Deployment label: PROD-USNC-4.4.5-master-3990984
+    You are on RD00155D4807E3.
+-->
+
+</footer>
+
+    <script src="/Scripts/gallery/site.min.js?v=OWFxJlGPvlYccRSR9Qh2XJGZfO4UdSUF-yteDFnYs9I1"></script>
+
+    
+
+
+    <style type="text/css">
+        #package-manager .install-script::before {    content: "PM> "}#dotnet-cli .install-script::before {    content: "> "}#paket-cli .install-script::before {    content: "> "}
+    </style>
+
+    <script type="text/javascript">
+        var packageManagers = ["package-manager","dotnet-cli","package-reference","paket-cli"];
+    </script>
+
+    <script src="/Scripts/gallery/page-display-package.min.js?v=RUADeTB9aUCl5iSg16uuyybopksGsHEv-8SdRHPQE_w1"></script>
+
+
+    <!-- begin usabilla live embed code -->
+<script type="text/javascript">
+/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/f784ddc211be.js");
+/*]]>{/literal}*/</script>
+<!-- end usabilla live embed code -->
+<script type="text/javascript">
+window.nuget.enableUsabilla('');
+</script>
+
+</body>
+</html>

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.IO.Compression;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAN_LVI
 {
@@ -19,9 +16,9 @@ namespace DAN_LVI
             string result = sr.ReadToEnd();
             sr.Close();
             response.Close();
-
             return result;
         }
+
         static void Main(string[] args)
         {
             string path;
@@ -34,6 +31,20 @@ namespace DAN_LVI
                 if (input == "exit")
                 {
                     break;
+                }
+                else if(input == "zip")
+                {
+                    try
+                    {
+                        File.Delete("..\\..\\MyZipedHtmlFiles.zip");
+                        ZipFile.CreateFromDirectory("..\\..\\MyHtmlFiles\\", "..\\..\\MyZipedHtmlFiles.zip");
+                        Console.WriteLine("Files are zipped");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Zipping failed.");
+                    }
+                    
                 }
                 else
                 {
